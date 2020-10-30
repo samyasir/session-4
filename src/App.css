@@ -1,0 +1,33 @@
+div {
+           justify-content: center;
+           background-color: rgb(1, 29, 29);
+           color: white;
+}
+
+.buttondiv {
+
+  justify-content: center;
+  margin: 0px 33%;
+}
+
+h2 {
+
+  margin: 5px 40%;
+}
+
+button {
+
+  background-color: rgb(7, 4, 20);
+  color: white;
+  height: 60px;
+  width: 200px;
+  text-transform: uppercase;
+  margin: 0px 10px;
+  border-radius: 8px;
+  
+}
+
+button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
