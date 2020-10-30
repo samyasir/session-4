@@ -7,10 +7,10 @@ function App() {
   
   let [count,setCount] = useState(0);
   let [lastcount,setLastCount] = useState(count);
-  let [isMorning, setMorning] = useState(false); 
+  let [isMorning, setMorning] = useState(true); 
 
   return (
-    <div className= {'dayMode ${isMorning ? "nightMode" : ""}'}>
+    <div className= {isMorning ? 'dayMode' : 'nightMode'}>
       <h1>Day Time = {isMorning ? 'Morning' : 'Night'}</h1>
       <Message counter={count} lastcounted={lastcount+1}/>
      <br />
