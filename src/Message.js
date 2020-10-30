@@ -6,7 +6,11 @@ import App from './App';
 function Message (props){
 
     return (
-        <h2>Let's start Counting : {props.counter}</h2>
+        <div>
+            <h2>Let's start Counting : {props.counter}</h2>
+    <h2>You Counted Upto {props.lastcounted} Last Time </h2>
+        </div>
+        
 
     );
 }
