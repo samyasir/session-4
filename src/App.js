@@ -1,13 +1,17 @@
-import React , {useState} from 'react';
+import { render } from '@testing-library/react';
+import React , {useState}  from 'react';
 import './App.css';
 import Message from './Message';
 
 function App() {
+  
+  let [count,setCount] = useState(0);
+  let [lastcount,setLastCount] = useState(count);
+  let [isMorning, setMorning] = useState(false); 
 
-  let [count,setCount] = useState(0)
-  let [lastcount,setLastCount] =useState(count)
   return (
-    <div >
+    <div className= {'dayMode ${isMorning ? "nightMode" : ""}'}>
+      <h1>Day Time = {isMorning ? 'Morning' : 'Night'}</h1>
       <Message counter={count} lastcounted={lastcount+1}/>
      <br />
      <div className='buttondiv'>
@@ -23,6 +27,13 @@ function App() {
      }
      >
        Reset
+     </button>
+
+     <button onClick ={
+
+       ()=> setMorning(!isMorning)
+     }>
+        Change Mode
      </button>
 
      </div>
